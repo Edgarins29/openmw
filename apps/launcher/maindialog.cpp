@@ -84,24 +84,28 @@ void Launcher::MainDialog::createIcons()
     playButton->setIcon(QIcon(":/images/openmw.png"));
     playButton->setText(tr("Play"));
     playButton->setTextAlignment(Qt::AlignCenter);
+    playButton->setSizeHint(QSize(72,72));
     playButton->setFlags(Qt::ItemIsSelectable | Qt::ItemIsEnabled);
 
     QListWidgetItem *dataFilesButton = new QListWidgetItem(iconWidget);
     dataFilesButton->setIcon(QIcon(":/images/openmw-plugin.png"));
     dataFilesButton->setText(tr("Data Files"));
     dataFilesButton->setTextAlignment(Qt::AlignHCenter | Qt::AlignBottom);
+    dataFilesButton->setSizeHint(QSize(72,72));
     dataFilesButton->setFlags(Qt::ItemIsSelectable | Qt::ItemIsEnabled);
 
     QListWidgetItem *graphicsButton = new QListWidgetItem(iconWidget);
     graphicsButton->setIcon(QIcon::fromTheme("video-display"));
     graphicsButton->setText(tr("Graphics"));
     graphicsButton->setTextAlignment(Qt::AlignHCenter | Qt::AlignBottom | Qt::AlignAbsolute);
+    graphicsButton->setSizeHint(QSize(72,72));
     graphicsButton->setFlags(Qt::ItemIsSelectable | Qt::ItemIsEnabled);
 
     QListWidgetItem *settingsButton = new QListWidgetItem(iconWidget);
     settingsButton->setIcon(QIcon::fromTheme("preferences-system"));
     settingsButton->setText(tr("Settings"));
     settingsButton->setTextAlignment(Qt::AlignHCenter | Qt::AlignBottom);
+    settingsButton->setSizeHint(QSize(72,72));
     settingsButton->setFlags(Qt::ItemIsSelectable | Qt::ItemIsEnabled);
 
     connect(iconWidget,
